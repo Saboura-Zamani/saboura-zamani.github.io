@@ -1,5 +1,4 @@
-# SabouraZamani.github.io
-# Personal Website
+# SabouraZamani.github.io (Personal Website)
 
 This repository is the source code for my personal website. I built this website as a simple space to present my research, publications, academic activities, and contact information in a more accesible way.
 
