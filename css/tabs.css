@@ -1,0 +1,81 @@
+/* =============================================================
+   Tabs + content section layout
+   ============================================================= */
+
+.tab-container {
+  display: flex;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  font-weight: bold;
+  color: #1a0dab;
+}
+
+.tab:hover {
+  text-decoration: underline;
+}
+
+.tab.active {
+  border-bottom: 3px solid #1a0dab;
+  color: black;
+}
+
+.content-section {
+  display: none;
+  padding: 10px;
+}
+
+.content-section.active {
+  display: block;
+}
+
+/* =============================================================
+   Cards used inside sections (research, news, experience...)
+   ============================================================= */
+
+.blogs-container,
+.research-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.blogs-image,
+.research-image {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.blogs-text,
+.research-text {
+  flex: 1;
+}
+
+.papertitle {
+  font-weight: bold;
+  font-size: 16px;
+  color: #1a0dab;
+}
+
+a {
+  text-decoration: none;
+  color: #1a0dab;
+}
+
+a:hover {
+  text-decoration: underline;
+}
