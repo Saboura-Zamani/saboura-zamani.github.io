@@ -1,0 +1,149 @@
+/* =============================================================
+   POLISH — typography, color palette, hover effects
+   Layer on top of tabs.css for a more refined look
+   ============================================================= */
+
+/* ---------- Modern font stack ---------- */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  color: #2c2c2c;
+  line-height: 1.6;
+  background-color: #fafaf7;  /* soft warm off-white instead of pure white */
+}
+
+/* Smoother headings */
+h1, h2, h3, h4 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 4px;
+  color: #1a1a1a;
+}
+
+/* ---------- Profile photo polish ---------- */
+.hoverZoomLink img,
+img[alt="profile photo"] {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hoverZoomLink:hover img,
+a:hover img[alt="profile photo"] {
+  transform: scale(1.03);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------- Card hover effect ---------- */
+.blogs-container,
+.research-container {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  padding: 18px 20px;
+}
+
+.blogs-container:hover,
+.research-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-color: #d4d4d4;
+}
+
+/* ---------- Accent color: soft coral for highlights ---------- */
+:root {
+  --accent: #c54e3b;       /* warm coral */
+  --accent-soft: #e8806f;
+  --link: #1a5a8a;         /* slightly softer than the original royal blue */
+}
+
+a {
+  color: var(--link);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.papertitle {
+  color: var(--link);
+  font-size: 17px;
+}
+
+/* ---------- Tabs polish ---------- */
+.tab-container {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 30px;
+  gap: 4px;
+}
+
+.tab {
+  color: #666;
+  padding: 12px 20px;
+  border-radius: 6px 6px 0 0;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  font-weight: 500;
+}
+
+.tab:hover {
+  color: var(--link);
+  background-color: rgba(26, 90, 138, 0.05);
+  text-decoration: none;
+}
+
+.tab.active {
+  color: var(--accent);
+  border-bottom: 3px solid var(--accent);
+  font-weight: 700;
+  background-color: transparent;
+}
+
+/* ---------- Section / year dividers use accent color ---------- */
+.section-header {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  font-size: 24px;
+  margin-top: 45px;
+}
+
+.year-divider {
+  color: #8a8a8a;
+  font-size: 18px;
+  border-bottom: 1px dashed #d4d4d4;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ---------- Publications list ---------- */
+.content-section ol > li {
+  margin-bottom: 26px;
+  padding-left: 8px;
+}
+
+.content-section ol > li::marker {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ---------- Intro paragraph ---------- */
+.content-section > p:first-child {
+  font-size: 15px;
+  color: #666;
+  font-style: italic;
+  border-left: 3px solid var(--accent-soft);
+  padding-left: 12px;
+}
+
+/* ---------- Footer ---------- */
+body > table tr:last-child p {
+  color: #999;
+  font-size: 12px;
+  margin-top: 30px;
+}
