@@ -79,3 +79,85 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* =============================================================
+   Year dividers between groups of cards
+   ============================================================= */
+
+.year-divider {
+  font-size: 22px;
+  font-weight: bold;
+  color: #444;
+  margin: 35px 0 15px 0;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e0e0e0;
+  letter-spacing: 1px;
+}
+
+/* First year divider in a section shouldn't have huge top margin */
+.content-section > .year-divider:first-child {
+  margin-top: 10px;
+}
+
+/* A bit more breathing room between cards */
+.blogs-container,
+.research-container {
+  margin-bottom: 16px;
+}
+
+/* Section intro paragraph */
+.content-section > p:first-child {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* =============================================================
+   Section headers (e.g. Talks, Posters, Peer Review)
+   Bigger and bolder than year dividers
+   ============================================================= */
+
+.section-header {
+  font-size: 26px;
+  font-weight: bold;
+  color: #1a0dab;
+  margin: 40px 0 10px 0;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #1a0dab;
+}
+
+.content-section > .section-header:first-child,
+.content-section > p:first-child + .section-header {
+  margin-top: 15px;
+}
+
+/* Compact list styling for community / talks */
+.compact-list {
+  margin: 5px 0 20px 0;
+  padding-left: 25px;
+}
+
+.compact-list li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.compact-list li strong {
+  color: #333;
+}
+
+/* =============================================================
+   Publication list (research tab)
+   ============================================================= */
+
+.content-section ol {
+  padding-left: 25px;
+}
+
+.content-section ol > li {
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+
+.content-section ol > li:last-child {
+  margin-bottom: 0;
+}
