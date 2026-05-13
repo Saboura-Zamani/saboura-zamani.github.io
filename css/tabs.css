@@ -29,12 +29,20 @@
 }
 
 .content-section {
+  /* Hidden by default — faded out, no pointer events, taking no space */
   display: none;
+  opacity: 0;
   padding: 10px;
+  transition: opacity 0.35s ease;
 }
 
 .content-section.active {
   display: block;
+}
+
+/* The "show" class triggers the fade-in once display:block has applied */
+.content-section.active.show {
+  opacity: 1;
 }
 
 /* =============================================================
