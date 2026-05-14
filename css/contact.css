@@ -1,0 +1,114 @@
+/* =============================================================
+   CONTACT SECTION — styled card with photo and links
+   ============================================================= */
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(135deg, #ffffff 0%, #f7f7f3 100%);
+  border: 1px solid #e8e8e8;
+  border-radius: 14px;
+  padding: 30px 32px;
+  margin-top: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Photo on the left */
+.contact-photo {
+  flex-shrink: 0;
+}
+
+.contact-photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Text + links on the right */
+.contact-body {
+  flex: 1;
+}
+
+.contact-body .contact-intro {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 18px 0;
+  font-style: normal;
+  border-left: none;
+  padding-left: 0;
+}
+
+/* Email "buttons" */
+.contact-emails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.email-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.email-button:hover {
+  border-color: var(--accent, #c54e3b);
+  color: var(--accent, #c54e3b);
+  transform: translateX(3px);
+  text-decoration: none;
+}
+
+.email-button .label {
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #999;
+}
+
+.email-button:hover .label {
+  color: var(--accent, #c54e3b);
+}
+
+/* Social row */
+.contact-socials {
+  font-size: 14px;
+  color: #777;
+}
+
+.contact-socials a {
+  margin: 0 4px;
+  font-weight: 500;
+}
+
+/* ---------- Mobile: stack photo on top ---------- */
+@media (max-width: 600px) {
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 20px;
+  }
+
+  .contact-emails {
+    align-items: center;
+  }
+
+  .contact-body .contact-intro {
+    text-align: center;
+  }
+}
