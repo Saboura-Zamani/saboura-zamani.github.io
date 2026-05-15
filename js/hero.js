@@ -14,21 +14,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     isEntering = true;
 
+    // Start the fade-out animation
     hero.classList.add("hero-fading");
     document.body.classList.add("lock-scroll");
 
+    // After the fade completes, fully remove the hero from the layout
+    // so it can no longer be scrolled back into, and jump to the top
+    // of the main content cleanly.
     setTimeout(() => {
-      window.scrollTo({
-        top: main.offsetTop,
-        behavior: "auto"
-      });
-
+      hero.classList.add("hero-gone");      // sets display:none in CSS
       document.body.classList.remove("lock-scroll");
-
-      setTimeout(() => {
-        hero.classList.remove("hero-fading");
-        isEntering = false;
-      }, 300);
+      window.scrollTo({ top: 0, behavior: "auto" });
+      isEntering = false;
     }, 350);
   }
 

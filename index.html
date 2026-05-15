@@ -8,6 +8,9 @@
 
   <link rel="shortcut icon" href="images/selfie.jpg" type="image/x-icon">
 
+  <!-- Preload the hero background so it starts downloading immediately -->
+  <link rel="preload" as="image" href="images/background.jpg">
+
   <!-- Modern font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,12 +20,6 @@
   <link rel="stylesheet" type="text/css" href="css/tabs.css">
   <link rel="stylesheet" type="text/css" href="css/polish.css">
   <link rel="stylesheet" type="text/css" href="css/contact.css">
-
-  <!-- Font size bump -->
-  <style>
-    .header-bio { font-size: 1.3rem; line-height: 1.6; }
-    h1.name { font-size: 2.1rem; margin-bottom: 0.4em; }
-  </style>
 
   <title>Saboura Zamani</title>
 </head>
@@ -49,30 +46,30 @@
       <tbody>
         <tr style="padding:0">
           <td style="padding:0">
-            
+
           <!-- =================== HEADER (name, bio, links, photo) =================== -->
           <table
             style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <tr style="padding:0">
                 <td style="padding:2.5%;width:63%;vertical-align:middle">
-                  <h1 class="name" style="text-align:center;">Saboura Zamani</h1>
+                  <h1 class="name">Saboura Zamani</h1>
                   <p class="header-bio">
-                    I am a PhD student at the <a href="https://cosmo.usz.edu.pl/">University of Szczecin</a>, Poland.
-                    I am working under the supervision of Professor Vincenzo Salzano. I mainly work on statistical
-                    analysis and on testing modified gravity models as alternatives to General Relativity.
+                    PhD student at the <a href="https://cosmo.usz.edu.pl/">University of Szczecin</a>, Poland,
+                    working with Prof. Vincenzo Salzano on statistical tests of modified gravity models
+                    as alternatives to General Relativity.
                   </p>
-                  <p class="header-bio" style="text-align:center">
+                  <p class="header-links">
                     <a href="mailto:m.saboura.zamani@gmail.com">Email</a>
-                    &nbsp;/&nbsp;
+                    <span class="sep">/</span>
                     <a href="files/CV__Saboura_Zamani.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-                    &nbsp;/&nbsp;
+                    <span class="sep">/</span>
                     <a href="https://www.linkedin.com/in/saboura-zamani/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    &nbsp;/&nbsp;
+                    <span class="sep">/</span>
                     <a href="https://bsky.app/profile/saboura-zamani.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
-                    &nbsp;/&nbsp;
+                    <span class="sep">/</span>
                     <a href="https://github.com/Saboura-Zamani" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    &nbsp;/&nbsp;
+                    <span class="sep">/</span>
                     <a href="https://inspirehep.net/authors/1946079?ui-citation-summary=true" target="_blank" rel="noopener noreferrer">InspireHep</a>
                   </p>
                 </td>
@@ -80,7 +77,10 @@
                 <td style="padding:2.5%;width:37%;max-width:37%">
                   <a href="images/Profile.jpg" target="_blank" rel="noopener noreferrer">
                     <img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;"
-                         alt="profile photo" src="images/Profile.jpg" class="hoverZoomLink">
+                         alt="profile photo" src="images/Profile.jpg"
+                         width="300" height="300"
+                         loading="eager" decoding="async"
+                         class="hoverZoomLink">
                   </a>
                 </td>
               </tr>
