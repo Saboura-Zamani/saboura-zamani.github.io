@@ -11,7 +11,7 @@
   <!-- Modern font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="stylesheet" type="text/css" href="css/tabs.css">
@@ -27,13 +27,29 @@
   <title>Saboura Zamani</title>
 </head>
 
-<body>
-  <table
-    style="width:100%;max-width:800px;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-      <tr style="padding:0">
-        <td style="padding:0">
 
+<body>
+
+  <!-- =================== HERO / FIRST PAGE =================== -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Saboura Zamani</h1>
+      <p>PhD Candidate in Cosmology</p>
+      <p class="hero-subtitle">Dark Matter · Modified Gravity · Gravitational Lensing</p>
+
+      <a href="#main-content" class="hero-button">Enter website</a>
+    </div>
+  </section>
+
+  <!-- =================== MAIN WEBSITE =================== -->
+  <main id="main-content" class="main-content">
+
+    <table
+      style="width:100%;max-width:800px;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <tbody>
+        <tr style="padding:0">
+          <td style="padding:0">
+            
           <!-- =================== HEADER (name, bio, links, photo) =================== -->
           <table
             style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -102,6 +118,9 @@
     </tbody>
   </table>
 
+  </main>
+
+  <script src="js/hero.js"></script>
   <script src="js/tabs.js"></script>
 </body>
 

@@ -147,3 +147,117 @@ body > table tr:last-child p {
   font-size: 12px;
   margin-top: 30px;
 }
+
+/* =============================================================
+   HERO / LANDING PAGE
+   ============================================================= */
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+}
+
+/* Full first screen */
+.hero-section {
+  min-height: 100vh;
+  width: 100%;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("../images/background.jpg");
+
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Text box in the middle */
+.hero-content {
+  padding: 40px 30px;
+  color: white;
+  max-width: 850px;
+}
+
+.hero-content h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: white;
+  font-size: clamp(4rem, 9vw, 7rem);
+  font-weight: 600;
+  margin: 0 0 18px 0;
+  letter-spacing: 0.06em;
+}
+
+.hero-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  margin: 8px 0;
+}
+
+.hero-subtitle {
+  opacity: 0.9;
+  font-size: clamp(1rem, 1.7vw, 1.25rem);
+}
+
+/* Button */
+.hero-button {
+  display: inline-block;
+  margin-top: 34px;
+  padding: 12px 28px;
+
+  color: white;
+  border: 1.5px solid white;
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+
+  transition: all 0.25s ease;
+}
+
+.hero-button:hover {
+  background-color: white;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+/* Space before the normal website starts */
+.main-content {
+  padding-top: 45px;
+}
+
+/* Mobile adjustment */
+@media (max-width: 700px) {
+  .hero-section {
+    background-position: center center;
+  }
+
+  .hero-content {
+    padding: 30px 20px;
+  }
+}
+
+/* =============================================================
+   HERO FADE-OUT WHEN ENTERING WEBSITE
+   ============================================================= */
+
+.hero-section {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.hero-section.hero-fading {
+  opacity: 0;
+  transform: scale(1.03);
+}
+
+body.lock-scroll {
+  overflow: hidden;
+}
